@@ -25,9 +25,9 @@ let count = 0;
 function askNumber() {
     if (count < 10) {
         rl.question(`Введите число ${count+1}: `, (answer) => {
-            iter.push(Number(answer)); // переводим в число
+            iter.push(Number(answer));
             count++;
-            askNumber(); // рекурсивный вызов для следующего числа
+            askNumber();
         });
     } else {
         rl.close();
